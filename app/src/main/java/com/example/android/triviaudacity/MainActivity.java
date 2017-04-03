@@ -57,19 +57,18 @@ public class MainActivity extends AppCompatActivity {
             TextView TitleTextView = (TextView) findViewById(R.id.title);
             TitleTextView.setVisibility(View.GONE);
             Button botonSiguiente = (Button) findViewById(R.id.siguiente);
-            botonSiguiente.setText("Siguiente");
+            botonSiguiente.setText(getString(R.string.button_next));
             View LayoutOpciones = findViewById(R.id.options);
             LayoutOpciones.setVisibility(View.VISIBLE);
             puntos = 0;
             resultado = 0;
             ImageView.setImageResource(R.drawable.atomiun);
-            TextView.setText("Cúal es el nombre del monumento que ves en la imagen superior:");
-            TextOpcion1.setText("Tour Eiffel");
-            TextOpcion2.setText("Microbium");
-            TextOpcion3.setText("Atomium");
+            TextView.setText(getString(R.string.pregunta1));
+            TextOpcion1.setText(getString(R.string.respuesta1_1));
+            TextOpcion2.setText(getString(R.string.respuesta2_1));
+            TextOpcion3.setText(getString(R.string.respuesta3_1));
             pregunta = pregunta + 1;
-            //Toast toast = Toast.makeText(getApplicationContext(), "Primera Pregunta Resultado = " + resultado, Toast.LENGTH_SHORT);
-            //toast.show();
+
         } else {
 
             if (pregunta == 1) {
@@ -77,40 +76,37 @@ public class MainActivity extends AppCompatActivity {
                 puntos = corregirRadioButton(idx, pregunta);
                 resultado = resultado + puntos;
                 ImageView.setImageResource(R.drawable.pis);
-                TextView.setText("Esta pequeña estatua lleva el nombre de:");
-                TextOpcion1.setText("Little Pis");
-                TextOpcion2.setText("Manneken Pis");
-                TextOpcion3.setText("Pettit Boy Pee");
+                TextView.setText(getString(R.string.pregunta2));
+                TextOpcion1.setText(getString(R.string.respuesta2_1));
+                TextOpcion2.setText(getString(R.string.respuesta2_2));
+                TextOpcion3.setText(getString(R.string.respuesta3_2));
                 pregunta = pregunta + 1;
-                //Toast toast = Toast.makeText(getApplicationContext(), "Resultado Atomium en Manneken: " + resultado, Toast.LENGTH_SHORT);
-                //toast.show();
+
             } else {
                 if (pregunta == 2) {
                     firstBar.setProgress(40);
                     puntos = corregirRadioButton(idx, pregunta);
                     ImageView.setImageResource(R.drawable.frites);
-                    TextView.setText("Las Patatas Fritas son un invento:");
-                    TextOpcion1.setText("Belga");
-                    TextOpcion2.setText("Francés");
-                    TextOpcion3.setText("Español");
+                    TextView.setText(getString(R.string.pregunta3));
+                    TextOpcion1.setText((getString(R.string.respuesta1_3)));
+                    TextOpcion2.setText((getString(R.string.respuesta2_3)));
+                    TextOpcion3.setText((getString(R.string.respuesta3_3)));
                     pregunta = pregunta + 1;
                     resultado = resultado + puntos;
-                    //Toast toast = Toast.makeText(getApplicationContext(), "Resultado Manenken en Frites: " + resultado, Toast.LENGTH_SHORT);
-                    //toast.show();
+
                 } else {
                     if (pregunta == 3) {
                         firstBar.setProgress(60);
                         puntos = corregirRadioButton(idx, pregunta);
                         resultado = resultado + puntos;
                         ImageView.setImageResource(R.drawable.bruselas2);
-                        TextView.setText("Qué productos puedes encontrar fácilmente en las calles de Bruselas:");
+                        TextView.setText(getString(R.string.pregunta4));
                         View LayoutOpciones = findViewById(R.id.options);
                         LayoutOpciones.setVisibility(View.GONE);
                         View LayoutCheckBoxes = findViewById(R.id.checkboxes);
                         LayoutCheckBoxes.setVisibility(View.VISIBLE);
                         pregunta = pregunta + 1;
-                        //Toast toast = Toast.makeText(getApplicationContext(), "Resultado Fites en Wafles: " + resultado, Toast.LENGTH_SHORT);
-                        //toast.show();
+
                     } else {
                         if (pregunta == 4) {
                             firstBar.setProgress(80);
@@ -135,12 +131,11 @@ public class MainActivity extends AppCompatActivity {
                             ImageView.setImageResource(R.drawable.miluo5);
                             View layoutRespuestaTexto = findViewById(R.id.respuestaTexto);
                             layoutRespuestaTexto.setVisibility(View.VISIBLE);
-                            TextView.setText("Como se llama el perro de Tin-Tin:");
+                            TextView.setText(getString(R.string.pregunta5));
                             pregunta = pregunta + 1;
                             View layoutOpciones = findViewById(R.id.checkboxes);
                             layoutOpciones.setVisibility(View.GONE);
-                            //Toast toast = Toast.makeText(getApplicationContext(), "Resultado Pregunta Wafles en Pregunta : " + resultado, Toast.LENGTH_SHORT);
-                            //toast.show();
+
                         } else {
                             if (pregunta == 5) {
                                 firstBar.setProgress(100);
@@ -156,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                                     puntos = 0;
                                 }
                                 resultado = resultado + puntos;
-                                Toast toast = Toast.makeText(getApplicationContext(), "Resultado Final: " + resultado + "/5", Toast.LENGTH_SHORT);
+                                Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.finish_counter)+ " " + resultado + getString(R.string.of), Toast.LENGTH_SHORT);
                                 toast.show();
 
                                 // FINAL DE LA TRIVIA
@@ -164,13 +159,13 @@ public class MainActivity extends AppCompatActivity {
                                 TitleTextView.setVisibility(View.VISIBLE);
                                 if (resultado == 5) {
                                     ImageView.setImageResource(R.drawable.smiley);
-                                    TitleTextView.setText("Wow!. You have made:\n" + resultado + "/5\nYou are a Belgium Expert!");
+                                    TitleTextView.setText(getString(R.string.wow) + ". " + getString(R.string.finish_counter) + " " + resultado + getString(R.string.of) + "\n" + getString(R.string.experto));
                                 } else {
                                     if (resultado > 1) {
-                                        TitleTextView.setText("Yuuuujuuuuu! You have made:\n" + resultado +"/5");
+                                        TitleTextView.setText(getString(R.string.yuhu) + ".\n" + getString(R.string.finish_counter)+ " " + resultado + getString(R.string.of));
                                         ImageView.setImageResource(R.drawable.smiley);
                                     } else {
-                                        TitleTextView.setText("Oh no!. You have made:\n" + resultado + "/5\nTry again");
+                                        TitleTextView.setText(getString(R.string.ohno) + ". " + getString(R.string.finish_counter)+ " " + resultado + getString(R.string.of) + "\n" + getString(R.string.try_again));
                                         ImageView.setImageResource(R.drawable.sad);
                                     }
                                 }
@@ -179,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
                                 View layoutRespuesta = findViewById(R.id.respuestaTexto);
                                 layoutRespuesta.setVisibility(View.GONE);
                                 Button botonSiguiente = (Button) findViewById(R.id.siguiente);
-                                botonSiguiente.setText("Restart");
+                                botonSiguiente.setText(getString(R.string.button_restart));
                                 //Log.v("Resultado Final", resultado + "");
                             }
                         }

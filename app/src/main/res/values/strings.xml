@@ -1,3 +1,63 @@
 <resources>
     <string name="app_name">Trivia Udacity</string>
+    <string name="button_restart">Restart</string>
+    <string name="button_next">Next</string>
+    <!-- PREGUNTAS Y RESPUESTAS -->
+    <string name="pregunta1">What is the name of this monument?</string>
+    <string name="respuesta1_1">Tour Eiffel</string>
+    <string name="respuesta2_1">Microbium</string>
+    <string name="respuesta3_1">Atomium</string>
+
+    <string name="pregunta2">What is the name of this little boy?</string>
+    <string name="respuesta1_2">Little Pis</string>
+    <string name="respuesta2_2">Mannenken Pis</string>
+    <string name="respuesta3_2">Petit Pee Boy</string>
+
+    <string name="pregunta3">The French Fries are invented by?</string>
+    <string name="respuesta1_3">Belgium</string>
+    <string name="respuesta2_3">Spain</string>
+    <string name="respuesta3_3">USA</string>
+
+    <string name="pregunta4">You can find this stuff at the street of Brussels:</string>
+    <string name="respuesta1_4">HotDog</string>
+    <string name="respuesta2_4">Chocolates</string>
+    <string name="respuesta3_4">Waffles</string>
+
+    <string name="pregunta5">What is the name of the TinTin\'s dog?</string>
+    <string name="respuesta_hint">Answer:</string>
+
+    <string name="yuhu">Yuuuuujuuuu!.</string>
+    <string name="ohno">Oh no!</string>
+
+    <string name="finish_counter">You have made:</string>
+    <string name="wow">Wow!</string>
+    <string name="experto">You are a Belgium\'s Expert!</string>
+    <string name="of">/5</string>
+    <string name="try_again">Try Again</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>
