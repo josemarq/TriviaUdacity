@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 resultado = resultado + puntos;
                 ImageView.setImageResource(R.drawable.pis);
                 TextView.setText(getString(R.string.pregunta2));
-                TextOpcion1.setText(getString(R.string.respuesta2_1));
+                TextOpcion1.setText(getString(R.string.respuesta1_2));
                 TextOpcion2.setText(getString(R.string.respuesta2_2));
                 TextOpcion3.setText(getString(R.string.respuesta3_2));
                 pregunta = pregunta + 1;
