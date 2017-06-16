@@ -21,8 +21,8 @@ import static com.example.android.triviaudacity.R.styleable.CompoundButton;
 
 public class MainActivity extends AppCompatActivity {
     public int pregunta = 1;
-    public int resultado = 0;
-    public int puntos = 0;
+    public int resultado;
+    public int puntos;
     private ProgressBar firstBar = null;
 
     @Override
@@ -175,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
                                 layoutRespuesta.setVisibility(View.GONE);
                                 Button botonSiguiente = (Button) findViewById(R.id.siguiente);
                                 botonSiguiente.setText(getString(R.string.button_restart));
-                                //Log.v("Resultado Final", resultado + "");
                             }
                         }
                     }
