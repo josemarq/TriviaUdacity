@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
     //Corrige las preguntas de CheckBox 4
     public int corregirCheckBox(boolean perros, boolean chocolate, boolean wafles) {
         Log.v("CheckBoxes", perros + "\n" + chocolate + "\n" + wafles);
-        if ((chocolate) && (wafles) && (!(perros))) {
+        if (chocolate && wafles && !perros) {
             puntos = 1;
         } else {
             puntos = 0;
